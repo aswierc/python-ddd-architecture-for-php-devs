@@ -4,7 +4,7 @@
 
 ## Intro
 
-The project was made for PHP (Symfony) developers like me, who were curious if it's possible to make something similar using Python and his libraries.
+The project was made for PHP (Symfony) developers like me, who were curious if it's possible to make something similar using Python and its libraries.
 
 I feel like there are a lot of programmers who wanted to try Python. But they were back to PHP after encountering Django.
 
