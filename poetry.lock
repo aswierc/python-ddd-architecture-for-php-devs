@@ -172,6 +172,24 @@ doc = ["mdx-include (>=1.4.1,<2.0.0)", "mkdocs (>=1.1.2,<2.0.0)", "mkdocs-markdo
 test = ["anyio[trio] (>=3.2.1,<4.0.0)", "black (==22.10.0)", "coverage[toml] (>=6.5.0,<8.0)", "databases[sqlite] (>=0.3.2,<0.7.0)", "email-validator (>=1.1.1,<2.0.0)", "flask (>=1.1.2,<3.0.0)", "httpx (>=0.23.0,<0.24.0)", "isort (>=5.0.6,<6.0.0)", "mypy (==0.982)", "orjson (>=3.2.1,<4.0.0)", "passlib[bcrypt] (>=1.7.2,<2.0.0)", "peewee (>=3.13.3,<4.0.0)", "pytest (>=7.1.3,<8.0.0)", "python-jose[cryptography] (>=3.3.0,<4.0.0)", "python-multipart (>=0.0.5,<0.0.6)", "pyyaml (>=5.3.1,<7.0.0)", "ruff (==0.0.138)", "sqlalchemy (>=1.3.18,<1.4.43)", "types-orjson (==3.6.2)", "types-ujson (==5.6.0.0)", "ujson (>=4.0.1,!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0,<6.0.0)"]
 
 [[package]]
+name = "fastapi-events"
+version = "0.8.0"
+description = "Event dispatching library for FastAPI"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "fastapi-events-0.8.0.tar.gz", hash = "sha256:55e7bf487e5c895e44630c11f0b12bd04e52aa8ecafcdc14ff9a4de4fb1cdf90"},
+    {file = "fastapi_events-0.8.0-py3-none-any.whl", hash = "sha256:b9665ae815002b833d3c2b760e4685b5327dbe3efe5fbd7fc83f0e98e11a22ed"},
+]
+
+[package.extras]
+aws = ["boto3 (>=1.14)"]
+google = ["google-cloud-pubsub (>=2.13.6)"]
+otel = ["opentelemetry-api (>=1.12.0,<2.0)"]
+test = ["flake8 (>=3.9.2)", "google-cloud-pubsub (>=2.13.6)", "httpx (>=0.23.0)", "isort (>=5.10.1)", "moto[sqs] (==2.2)", "mypy (>=0.971)", "opentelemetry-sdk (>=1.12.0)", "opentelemetry-test-utils (>=0.33b0)", "pydantic (>=1.5.0)", "pytest (>=6.2.4)", "pytest-asyncio (>=0.18.3)", "pytest-env (>=0.6.2)", "pytest-mock (>=3.6.1)", "pytest-mypy (>=0.9.1)", "requests", "starlette (>=0.21.0)", "starlite (>=1.38.0)"]
+
+[[package]]
 name = "greenlet"
 version = "2.0.1"
 description = "Lightweight in-process concurrent programming"
@@ -610,4 +628,4 @@ standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)",
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "1130608a56a6b099415c86bfc43a6fbb2537cc39b23f230e38545d64210e2fb8"
+content-hash = "1d99f30e5fbbed66389d91bb9288d0d2a2a8fac980253d7d3c9d739673a47dfe"

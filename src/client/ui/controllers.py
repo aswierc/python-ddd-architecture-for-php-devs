@@ -1,25 +1,29 @@
-from fastapi import APIRouter, status, Body, Depends
-from fastapi.responses import JSONResponse, Response, RedirectResponse
-from pydantic import BaseModel, Field
+from fastapi import APIRouter, Depends
+from fastapi.responses import JSONResponse
+from fastapi_events.dispatcher import dispatch
 from kink import di
+
+from src.client.application.command import CreateClientCommand
 from src.client.domain.repository import ClientRepositoryInterface
+from src.client.ui.request import CreateClientRequest
 
 router = APIRouter(prefix='/client', tags=['client'])
 
-class ClientRequest(BaseModel):
-    name: str
-    surname: str
-    body: str = Field(min_length=10, max_length=20)
 
-
-@router.post('create')
-async def client_create(client: ClientRequest) -> JSONResponse:
-    return client
-
-
-@router.get('/{client_id}')
-async def client_get(
-    client_id: int,
-    client_repo: ClientRepositoryInterface = Depends(lambda: di[ClientRepositoryInterface])
+@router.post('')
+async def client_create(
+        client: CreateClientRequest
 ) -> JSONResponse:
-    return {"client": client_repo.get_client(client_id)}
+    command = CreateClientCommand.create(client.user_name)
+
+    dispatch(CreateClientCommand.get_name(), command)
+
+    return {"uuid": command['uuid']}
+
+
+@router.get('/{client_uuid}')
+async def client_get(
+        client_uuid: str,
+        client_repo: ClientRepositoryInterface = Depends(lambda: di[ClientRepositoryInterface])
+) -> JSONResponse:
+    return {"client": client_repo.get_client(client_uuid)}
