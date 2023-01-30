@@ -22,7 +22,7 @@ I feel like there are a lot of programmers who wanted to try Python. But they we
 
 ## Stack
 
-- Python 3.9
+- Python 3.10
 - FastAPI
 - PostgreSQL
 
