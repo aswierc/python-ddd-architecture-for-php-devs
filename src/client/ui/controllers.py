@@ -1,5 +1,4 @@
 from fastapi import APIRouter, Depends
-from fastapi.responses import JSONResponse
 from fastapi_events.dispatcher import dispatch
 from kink import di
 
@@ -13,7 +12,7 @@ router = APIRouter(prefix='/client', tags=['client'])
 @router.post('')
 async def client_create(
         client: CreateClientRequest
-) -> JSONResponse:
+) -> dict:
     command = CreateClientCommand.create(client.user_name)
 
     dispatch(CreateClientCommand.get_name(), command)
@@ -25,5 +24,5 @@ async def client_create(
 async def client_get(
         client_uuid: str,
         client_repo: ClientRepositoryInterface = Depends(lambda: di[ClientRepositoryInterface])
-) -> JSONResponse:
+) -> dict:
     return {"client": client_repo.get_client(client_uuid)}

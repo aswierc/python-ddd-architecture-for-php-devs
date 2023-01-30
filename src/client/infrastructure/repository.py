@@ -8,7 +8,7 @@ class ClientRepository(ClientRepositoryInterface):
     def __init__(self, db):
         self._db: Session = db
 
-    def get_client(self, uuid: int) -> Optional[ClientEntity]:
+    def get_client(self, uuid: str) -> Optional[ClientEntity]:
         entity: Optional[ClientEntity] = self._db\
             .query(ClientEntity)\
             .filter(ClientEntity.uuid == uuid)\

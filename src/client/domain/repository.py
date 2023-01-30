@@ -5,7 +5,7 @@ from src.client.domain.entity import ClientEntity
 
 class ClientRepositoryInterface(ABC):
     @abstractmethod
-    def get_client(self, uuid: int) -> Optional[ClientEntity]: ...
+    def get_client(self, uuid: str) -> Optional[ClientEntity]: ...
 
 
     @abstractmethod

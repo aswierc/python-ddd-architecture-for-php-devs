@@ -17,7 +17,7 @@ class CreateClientCommand(BaseModel):
 
     @staticmethod
     def get_name() -> str:
-        return ClientCommands.CREATE
+        return ClientCommands.CREATE.value
 
     @staticmethod
     def create(user_name: str) -> dict:
