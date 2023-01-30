@@ -15,8 +15,8 @@ I feel like there are a lot of programmers who wanted to try Python. But they we
 - Command-Handler, though queues as well - like Messenger in Symfony 
 - Implementation of Domain Events https://udidahan.com/2009/06/14/domain-events-salvation/
 - Implementation of a read model (CQRS)
-- Show how to write tests (pytest)
-- Static analysis tools (mypy)
+- ~~Show how to write tests (pytest)~~
+- ~~Static analysis tools (mypy)~~
 - ...
 - Invite to cooperation :) 
 
