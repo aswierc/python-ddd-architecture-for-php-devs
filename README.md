@@ -27,20 +27,20 @@ The system allows clients to subscribe to the gym (60EUR per month).
 Requirements:  
 - registration new clients
 - active clients will be billed monthly automatically 
--- billing is processed every first day of the month 
+  - billing is processed every first day of the month 
 - the system can apply bonuses
--- percents or amounts
--- if the client has a birthday in the current month, the customer is entitled to a percentage discount (50%)
--- for new clients will have amount discount (20EUR)
--- if the client is employed in the gym, is entitled to a free subscription (100%)
+  - percents or amounts
+  - if the client has a birthday in the current month, the customer is entitled to a percentage discount (50%)
+  - for new clients will have amount discount (20EUR)
+  - if the client is employed in the gym, is entitled to a free subscription (100%)
 
 Examples:  
 - John has a birthday in February, he should pay 50% less 
 - Charlotte is new at the gym, her first payment will be 20EUR less 
 - Emma works at the gym, and have a subscription, have a free subscription 
 - Emma as a gym employee also has to:
--- generate monthly reports
--- filter users by name, surname, and email, and check if the subscription is active
+  - generate monthly reports
+  - filter users by name, surname, and email, and check if the subscription is active
 
 ## Stack
 
